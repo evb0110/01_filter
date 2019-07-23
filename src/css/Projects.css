@@ -1,0 +1,16 @@
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.images img {
+  margin: 15px;
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  flex: 1 1;
+}
