@@ -7,6 +7,8 @@ export default function Portfolio() {
   const [activeTag, setActiveTag] = useState(null);
   const [activePics, setActivePics] = useState(pics);
 
+  const categories = Array.from(new Set(pics.map(pic => pic.category)))
+
   const onChoose = tag => {
     setActiveTag(tag);
     if (tag === 'All') return setActivePics(pics);
@@ -18,7 +20,7 @@ export default function Portfolio() {
     <div>
       <Filters
         onChoose={onChoose}
-        categories={['All', 'Websites', 'Flayers', 'Business Cards']}
+        categories={['All', ...categories]}
         activeTag={activeTag}
       />
       <Projects pics={activePics} />

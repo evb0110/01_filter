@@ -10,7 +10,7 @@ export default function Filters(props) {
       {categories.map(cat => (
         <button
           onClick={() => onChoose(cat)}
-          className={props.activeTag === cat && 'red'}
+          className={props.activeTag === cat ? 'black button' : 'button'}
         >
           {cat}
         </button>
