@@ -18,7 +18,7 @@ export default function Portfolio() {
     <div>
       <Filters
         onChoose={onChoose}
-        categories={['All', 'Websites', 'Flayers', 'Business cards']}
+        categories={['All', 'Websites', 'Flayers', 'Business Cards']}
         activeTag={activeTag}
       />
       <Projects pics={activePics} />

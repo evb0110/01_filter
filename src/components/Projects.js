@@ -5,8 +5,13 @@ import '../css/Projects.css';
 export default function Projects(props) {
   return (
     <div class="images">
-      {props.pics.map(pic => (
-      <Project pic={pic} key={JSON.stringify(pic)} />
+      {props.pics.map((pic, i) => (
+        <Project
+          pic={pic}
+          key={Math.random()
+            .toString()
+            .slice(2, 10)}
+        />
       ))}
     </div>
   );
